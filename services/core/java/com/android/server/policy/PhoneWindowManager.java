@@ -475,6 +475,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     int[] mNavigationBarWidthForRotationDefault = new int[4];
     int[] mNavigationBarHeightForRotationInCarMode = new int[4];
     int[] mNavigationBarWidthForRotationInCarMode = new int[4];
+    private boolean mNavBarOverride;
 
     private LongSparseArray<IShortcutService> mShortcutKeyServices = new LongSparseArray<>();
 
@@ -1015,6 +1016,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.Secure.getUriFor(
                     Settings.Secure.LOCK_POWER_MENU_DISABLED), false, this,
+                    UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                    Settings.Secure.NAVIGATION_BAR_ENABLED), false, this,
                     UserHandle.USER_ALL);
 
             updateSettings();
@@ -2310,8 +2314,10 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         String navBarOverride = SystemProperties.get("qemu.hw.mainkeys");
         if ("1".equals(navBarOverride)) {
             mHasNavigationBar = false;
+            mNavBarOverride = true;
         } else if ("0".equals(navBarOverride)) {
             mHasNavigationBar = true;
+            mNavBarOverride = false;
         }
 
         // For demo purposes, allow the rotation of the HDMI display to be controlled.
@@ -2445,6 +2451,18 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mGlobalActionsOnLockDisable = Settings.Secure.getIntForUser(resolver,
                     Settings.Secure.LOCK_POWER_MENU_DISABLED, 1,
                     UserHandle.USER_CURRENT) != 0;
+
+            mHasNavigationBar = !mNavBarOverride && Settings.Secure.getIntForUser(
+                    resolver, Settings.Secure.NAVIGATION_BAR_ENABLED,
+                    mContext.getResources().getBoolean(
+                    com.android.internal.R.bool.config_showNavigationBar) ? 1 : 0,
+                    UserHandle.USER_CURRENT) == 1;
+            IStatusBarService sbar = getStatusBarService();
+            if (sbar != null) {
+                try {
+                    sbar.toggleNavigationBar(mHasNavigationBar);
+                } catch (RemoteException e1) {}
+            }
         }
         synchronized (mWindowManagerFuncs.getWindowManagerLock()) {
             PolicyControl.reloadFromSetting(mContext);

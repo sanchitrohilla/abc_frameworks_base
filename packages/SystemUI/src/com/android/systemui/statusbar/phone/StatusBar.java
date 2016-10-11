@@ -2897,6 +2897,24 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
+    @Override
+    public void toggleNavigationBar(boolean enable) {
+        if (enable) {
+            if (mNavigationBarView == null) {
+                createNavigationBar();
+                setDoubleTapNavbar();
+            }
+        } else {
+            if (mNavigationBarView != null){
+                FragmentHostManager fm = FragmentHostManager.get(mNavigationBarView);
+                mWindowManager.removeViewImmediate(mNavigationBarView);
+                mNavigationBarView = null;
+                fm.getFragmentManager().beginTransaction().remove(mNavigationBar).commit();
+                mNavigationBar = null;
+            }
+        }
+    }
+
     boolean panelsEnabled() {
         return (mDisabled1 & StatusBarManager.DISABLE_EXPAND) == 0 && !ONLY_CORE_APPS;
     }
