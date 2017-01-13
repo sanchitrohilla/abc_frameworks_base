@@ -30,6 +30,7 @@
     <string name="kb_left">Cursore sinistro tastiera</string>
     <string name="kb_right">Cursore destro tastiera</string>
 
+
     <!-- [CHAR LIMIT=60] -->
     <string-array name="nav_bar_buttons_abc">
         <item>Cursore sinistro tastiera</item>
@@ -39,4 +40,6 @@
         <item>Cambia tastiera</item>
         <item>Niente</item>
     </string-array>
+
+    <string name="quick_settings_doze_notifications_label">Notifiche Ambient</string>
 </resources>
