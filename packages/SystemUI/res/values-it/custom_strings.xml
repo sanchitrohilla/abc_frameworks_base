@@ -21,4 +21,22 @@
     <string name="global_action_restart_advanced">Riavvio avanzato</string>
     <string name="global_action_restart_recovery">Vai alla recovery</string>
     <string name="global_action_restart_bootloader">Vai al bootloader</string>
+
+    <string name="screenshot_abort_title">Impossibile catturare screenshot</string>
+    <string name="screenshot_abort_text">Operazione annullata</string>
+
+    <string name="summary_empty" translatable="false"></string>
+
+    <string name="kb_left">Cursore sinistro tastiera</string>
+    <string name="kb_right">Cursore destro tastiera</string>
+
+    <!-- [CHAR LIMIT=60] -->
+    <string-array name="nav_bar_buttons_abc">
+        <item>Cursore sinistro tastiera</item>
+        <item>Cursore destro tastiera</item>
+        <item>Appunti</item>
+        <item>Keycode</item>
+        <item>Cambia tastiera</item>
+        <item>Niente</item>
+    </string-array>
 </resources>
