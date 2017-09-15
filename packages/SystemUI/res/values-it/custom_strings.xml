@@ -42,4 +42,6 @@
     </string-array>
 
     <string name="quick_settings_doze_notifications_label">Notifiche Ambient</string>
+
+    <string name="recents_app_killed">App terminata</string>
 </resources>
