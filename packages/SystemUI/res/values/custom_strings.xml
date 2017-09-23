@@ -48,6 +48,8 @@
         <item>space</item>
     </string-array>
 
+    <string name="lockscreen_default_shortcuts">Default</string>
+
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
     <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
