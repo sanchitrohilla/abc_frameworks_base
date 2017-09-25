@@ -54,8 +54,8 @@ public class ShortcutPicker extends PreferenceFragment implements Tunable {
 
         mNonePreference = new SelectablePreference(context);
         mSelectablePreferences.add(mNonePreference);
-        mNonePreference.setTitle(R.string.lockscreen_default_shortcuts);
-        mNonePreference.setIcon(R.drawable.ic_android_lockscreen);
+        mNonePreference.setTitle(R.string.lockscreen_none);
+        mNonePreference.setIcon(R.drawable.ic_remove_circle);
         screen.addPreference(mNonePreference);
 
         LauncherApps apps = getContext().getSystemService(LauncherApps.class);
