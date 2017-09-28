@@ -30,7 +30,6 @@
     <string name="kb_left">Cursore sinistro tastiera</string>
     <string name="kb_right">Cursore destro tastiera</string>
 
-
     <!-- [CHAR LIMIT=60] -->
     <string-array name="nav_bar_buttons_abc">
         <item>Cursore sinistro tastiera</item>
@@ -44,4 +43,7 @@
     <string name="quick_settings_doze_notifications_label">Notifiche Ambient</string>
 
     <string name="recents_app_killed">App terminata</string>
+
+    <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
+    <string name="custom_hint">Scorri sull\'icona per avviare</string>
 </resources>
