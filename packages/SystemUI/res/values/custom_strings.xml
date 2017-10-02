@@ -104,4 +104,6 @@
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
     <string name="custom_hint">Swipe from icon to launch</string>
 
+    <!-- Notification: Menu row: Snooze options: 1 hour option. [CHAR LIMIT=50]-->
+    <string name="snooze_option_24_hour">24 hours</string>
 </resources>
