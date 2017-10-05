@@ -5507,7 +5507,7 @@ public class StatusBar extends SystemUI implements DemoMode,
 
     private void setLockscreenMediaMetadata() {
         mLockscreenMediaMetadata = Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.LOCKSCREEN_MEDIA_METADATA, 0, UserHandle.USER_CURRENT) == 1;
+                Settings.System.LOCKSCREEN_MEDIA_METADATA, 0, mCurrentUserId) == 1;
     }
 
     private void setQsPanelOptions() {
@@ -5521,14 +5521,14 @@ public class StatusBar extends SystemUI implements DemoMode,
                 com.android.internal.R.integer.config_screenBrightnessDoze);
         int customDozeBrightness = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.AMBIENT_DOZE_CUSTOM_BRIGHTNESS, defaultDozeBrightness,
-                UserHandle.USER_CURRENT);
+                mCurrentUserId);
         StatusBarWindowManager.updateCustomBrightnessDozeValue(customDozeBrightness);
     }
 
     private void setUseLessBoringHeadsUp() {
         mLessBoringHeadsUp = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.LESS_BORING_HEADS_UP, 1,
-                UserHandle.USER_CURRENT) == 1;
+                mCurrentUserId) == 1;
     }
 
     private void updateQsPanelResources() {
