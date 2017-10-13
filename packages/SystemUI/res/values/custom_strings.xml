@@ -78,6 +78,7 @@
 
     <!-- PiP Tile -->
     <string name="quick_settings_pip_label">PiP</string>
+    <string name="quick_settings_pip_tile_app_na">App does not support PiP</string>
 
     <!-- High Brightness Mode Tile -->
     <string name="quick_settings_high_brightness">High brightness</string>
@@ -102,4 +103,5 @@
 
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
     <string name="custom_hint">Swipe from icon to launch</string>
+
 </resources>
