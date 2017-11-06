@@ -50,4 +50,8 @@
 
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
     <string name="custom_hint">Scorri sull\'icona per avviare</string>
+
+    <string name="statusbar_icons_blacklist">Icone barra di stato</string>
+    <string name="navbar_tuner_activity">Pulsanti barra di navigazione</string>
+    <string name="lockscreen_tuner_activity">Collegamenti lockscreen</string>
 </resources>
