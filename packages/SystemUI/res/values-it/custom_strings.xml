@@ -27,23 +27,6 @@
 
     <string name="summary_empty" translatable="false"></string>
 
-    <string name="kb_left">Cursore sinistro tastiera</string>
-    <string name="kb_right">Cursore destro tastiera</string>
-    <string name="skip_prev">Curs. tastiera sx - Traccia prec.</string>
-    <string name="skip_next">Curs. tastiera dx - Traccia succ.</string>
-
-    <!-- [CHAR LIMIT=60] -->
-    <string-array name="nav_bar_buttons_abc">
-        <item>Cursore sinistro tastiera</item>
-        <item>Cursore destro tastiera</item>
-        <item>Curs. tastiera sx - Traccia prec.</item>
-        <item>Curs. tastiera dx - Traccia succ.</item>
-        <item>Appunti</item>
-        <item>Keycode</item>
-        <item>Cambia tastiera</item>
-        <item>Niente</item>
-    </string-array>
-
     <string name="quick_settings_doze_notifications_label">Notifiche Ambient</string>
 
     <string name="recents_app_killed">App terminata</string>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2017 ABC rom
+<!--  Copyright (C) 2014-2016 The Nitrogen Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -27,18 +27,6 @@
 
     <string name="kb_left">Левый курсор клавиатуры</string>
     <string name="kb_right">Правый курсор клавиатуры</string>
-
-    <!-- SysUI Tuner: Labels for different types of navigation bar buttons [CHAR LIMIT=60] -->
-    <string-array name="nav_bar_buttons_abc">
-        <item>Левый курсор клавиатуры</item>
-        <item>Правый курсор клавиатуры</item>
-        <item>Клав. влево - Предыдущий трек</item>
-        <item>Клав. вправо - Следующий трек</item>
-        <item>Буфер обмена</item>
-        <item>Код кнопки</item>
-        <item>Переключатель клавиатуры</item>
-        <item>Нет</item>
-    </string-array>
 
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Кофеин</string>
