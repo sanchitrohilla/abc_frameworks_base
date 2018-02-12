@@ -109,4 +109,6 @@
     <string name="caffeine_info_title">Что это такое?</string>
     <string name="caffeine_info_message">Кофеин - это плитка быстрых настроек, которая позволяет держать ваш экран включенным.\n\nПожалуйста, учтите, что состояние плитки сбрасывается при отключении экрана.</string>
 
+    <!-- Sound search -->
+    <string name="quick_settings_sound_search">Поиск музыки</string>
 </resources>
